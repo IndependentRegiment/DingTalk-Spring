@@ -66,6 +66,13 @@
 			<version>1.2</version>
 		</dependency>
 
+		<!-- String 转 JSON依赖 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.9</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

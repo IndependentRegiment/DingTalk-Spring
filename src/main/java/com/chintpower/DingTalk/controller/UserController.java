@@ -13,7 +13,7 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
-@RequestMapping(value = "/api1.0/user", method = RequestMethod.POST)
+@RequestMapping(value = "/api1.0/user", method = RequestMethod.GET)
 public class UserController {
 
     @Autowired
@@ -27,6 +27,12 @@ public class UserController {
 //            System.out.println(user.getUserId() + " ," + user.getName() + " ," + user.getDepId() + " ," + user.getEmploystatus());
 //        }
 //        return "获取所有的员工的列表";
+    }
+
+    @RequestMapping("/test")
+    public Object getUserByToken() {
+        Object json = userService.getJSONFromToken();
+        return json;
     }
 
 }
