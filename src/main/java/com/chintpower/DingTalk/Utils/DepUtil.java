@@ -20,7 +20,7 @@ public class DepUtil {
             req.setFetchChild(false);
             req.setId("1");
             req.setHttpMethod("GET");
-            OapiDepartmentListResponse rsp = client.execute(req, "ccf08970723d3604a01d2c024adc0342");
+            OapiDepartmentListResponse rsp = client.execute(req, dingTalkToken);
             var jsonObject = JSONObject.parseObject(rsp.getBody());
             JSONArray depObjArrayList = jsonObject.getJSONArray("department");
             var resList = new ArrayList<Department>();
@@ -44,7 +44,7 @@ public class DepUtil {
 
 
     public static void main(String[] args) {
-        ArrayList<Department> depList = new DepUtil().getRootDepList("ccf08970723d3604a01d2c024adc0342");
+        ArrayList<Department> depList = new DepUtil().getRootDepList("b2015b8a651838949746dc6130e2988f");
         for (Department depObj : depList) {
             System.out.println(depObj.getName() + " ," + depObj.getId() + " ," + depObj.getParentId());
         }
