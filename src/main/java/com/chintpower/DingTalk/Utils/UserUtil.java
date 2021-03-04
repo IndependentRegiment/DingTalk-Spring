@@ -11,6 +11,11 @@ import java.util.Arrays;
 
 
 public class UserUtil {
+    /**
+     * 用来获取当前所有的在职的员工列表
+     * @param dingTalkToken 钉钉的token
+     * @return 在职员工的Id的数组
+     */
     public static ArrayList<Object> getOnJobUserList(String dingTalkToken) {
         try {
             DingTalkClient client = new DefaultDingTalkClient("https://oapi.dingtalk.com/topapi/smartwork/hrm/employee/queryonjob");
